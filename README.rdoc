@@ -1,28 +1,3 @@
-== README
+This is a very simple Rails application that demonstrates a "minimum viable" tech stack as of 2015.  I put it together because I hadn't boot-strapped a Rails app in over a year, and I wanted to feel that I could do this if necessary with the things one needs in any real-world application (for example, background jobs).  Also, it's nice to have something on github to which one can point as proof that one knows what goes into any reasonable Rails app.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+It's a work in progress, and it's only just started.
