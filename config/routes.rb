@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :values
   root 'dummy#index'
   devise_for :users
 
