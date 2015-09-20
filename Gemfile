@@ -50,4 +50,5 @@ group :development, :test do
   gem 'launchy'
   gem 'poltergeist'
   gem 'capybara'
+  gem 'shoulda-matchers', require: false
 end
