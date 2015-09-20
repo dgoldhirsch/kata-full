@@ -1,10 +1,11 @@
 class ValuesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_value, only: [:show, :edit, :update, :destroy]
 
   # GET /values
   # GET /values.json
   def index
-    @values = Value.all
+    @values = Value.all.where(user: current_user)
   end
 
   # GET /values/1
@@ -14,7 +15,8 @@ class ValuesController < ApplicationController
 
   # GET /values/new
   def new
-    @value = Value.new
+    binding.pry
+    @value = Value.new(user: current_user)
   end
 
   # GET /values/1/edit
@@ -24,7 +26,7 @@ class ValuesController < ApplicationController
   # POST /values
   # POST /values.json
   def create
-    @value = Value.new(value_params)
+    @value = Value.new(value_params.merge(user: current_user))
 
     respond_to do |format|
       if @value.save
@@ -62,13 +64,12 @@ class ValuesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_value
-      @value = Value.find(params[:id])
-    end
+  def set_value
+    @value = Value.find_by(id: params[:id], user: current_user)
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def value_params
-      params.require(:value).permit(:name, :value, :user_id)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def value_params
+    params.require(:value).permit(:name, :value)
+  end
 end
