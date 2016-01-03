@@ -14,6 +14,7 @@ RSpec.configure do |config|
   config.include Devise::TestHelpers, type: :controller
 end
 
+require 'rspec/active_model/mocks'
 require 'shoulda/matchers'
 
 # Requires supporting ruby files with custom matchers and macros, etc, in

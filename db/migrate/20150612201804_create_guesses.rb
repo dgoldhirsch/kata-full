@@ -1,6 +1,6 @@
-class CreateValues < ActiveRecord::Migration
+class CreateGuesses < ActiveRecord::Migration
   def change
-    create_table :values do |t|
+    create_table :guesses do |t|
       t.string :name
       t.integer :value
       t.integer :user_id, null: false, index: true

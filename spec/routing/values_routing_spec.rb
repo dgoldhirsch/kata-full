@@ -1,35 +1,34 @@
 require "rails_helper"
 
-RSpec.describe ValuesController, type: :routing do
+RSpec.describe GuessesController, type: :routing do
   describe "routing" do
 
     it "routes to #index" do
-      expect(:get => "/values").to route_to("values#index")
+      expect(:get => "/guesses").to route_to("guesses#index")
     end
 
     it "routes to #new" do
-      expect(:get => "/values/new").to route_to("values#new")
+      expect(:get => "/guesses/new").to route_to("guesses#new")
     end
 
     it "routes to #show" do
-      expect(:get => "/values/1").to route_to("values#show", :id => "1")
+      expect(:get => "/guesses/1").to route_to("guesses#show", :id => "1")
     end
 
     it "routes to #edit" do
-      expect(:get => "/values/1/edit").to route_to("values#edit", :id => "1")
+      expect(:get => "/guesses/1/edit").to route_to("guesses#edit", :id => "1")
     end
 
     it "routes to #create" do
-      expect(:post => "/values").to route_to("values#create")
+      expect(:post => "/guesses").to route_to("guesses#create")
     end
 
     it "routes to #update" do
-      expect(:put => "/values/1").to route_to("values#update", :id => "1")
+      expect(:put => "/guesses/1").to route_to("guesses#update", :id => "1")
     end
 
     it "routes to #destroy" do
-      expect(:delete => "/values/1").to route_to("values#destroy", :id => "1")
+      expect(:delete => "/guesses/1").to route_to("guesses#destroy", :id => "1")
     end
-
   end
 end

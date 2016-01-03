@@ -1,4 +1,4 @@
-class Value < ActiveRecord::Base
+class Guess < ActiveRecord::Base
   belongs_to :user
 
   validates :user, presence: true

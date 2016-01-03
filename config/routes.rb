@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  resources :values
-  root 'dummy#index'
+  resources :guesses
+  root to: "home#index"
+#  root 'dummy#index'
   devise_for :users
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :value do
+  factory :guess do
     name "MyString"
     value 1
     association :user

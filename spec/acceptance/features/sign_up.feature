@@ -1,6 +1,6 @@
 Feature: As a user
   in order to see what I would expect to see
-  I see only my own values
+  I see only my own guesses
 
   Scenario: I sign up successfully
     Given I sign up
