@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :guesses
-  root to: "home#index"
+  root to: "guesses#index"
 #  root 'dummy#index'
   devise_for :users
 

@@ -2,14 +2,14 @@
 
 %p
   %b Name:
-  = @value.name
+  = @guess.name
 %p
   %b Value:
-  = @value.value
+  = @guess.value
 %p
   %b User:
-  = @value.user_id
+  = @guess.user_id
 
-= link_to 'Edit', edit_value_path(@value)
+= link_to 'Edit', edit_guess_path(@guess)
 \|
-= link_to 'Back', values_path
+= link_to 'Back', guess_path

@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+ruby "2.3.0"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails'
@@ -33,16 +34,16 @@ gem 'devise'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'rails_12factor', group: :production
+
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console'
 end
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  # gem 'byebug'
-  # gem "pry-byebug"
-
+  gem 'byebug'
+  gem "pry-byebug"
   gem 'faker'
   gem 'factory_girl_rails'
   gem 'rspec-rails'

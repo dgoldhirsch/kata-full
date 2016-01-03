@@ -10,7 +10,7 @@ RSpec.describe GuessesController, type: :controller do
     context "signed in" do
       before { sign_in(user) }
 
-      it "assigns all values as @values" do
+      it "assigns all guesses as @guesses" do
         get :index, {}
         expect(assigns(:guesses)).to eq(guesses)
       end

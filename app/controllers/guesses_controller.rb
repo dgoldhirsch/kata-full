@@ -13,7 +13,7 @@ class GuessesController < ApplicationController
 
   # GET /guess/new
   def new
-    @guess = Value.new(user: current_user)
+    @guess = Guess.new(user: current_user)
   end
 
   # GET /guesses/1/edit
