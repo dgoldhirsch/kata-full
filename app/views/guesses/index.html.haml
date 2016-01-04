@@ -5,7 +5,6 @@
     %tr
       %th Name
       %th Value
-      %th User
       %th
       %th
       %th
@@ -15,7 +14,6 @@
       %tr
         %td= guess.name
         %td= guess.value
-        %td= guess.user_id
         %td= link_to 'Show', guess
         %td= link_to 'Edit', edit_guess_path(guess)
         %td= link_to 'Destroy', guess, :method => :delete, :data => { :confirm => 'Are you sure?' }
